@@ -22,7 +22,7 @@ while turns > 0:
             fail += 1    
     if fail == 0:
         print("\n")        
-        print ("C0ngratulations You  have won !!!!!")
+        print ("Congratulations You  have won !!!!!")
         print("The word is:",word)
         break              
     guess = input("guess a character:") 
