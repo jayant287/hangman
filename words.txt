@@ -1,0 +1,8 @@
+bangalore
+chennai
+hyderabad
+pune
+python
+java
+coimbatore
+surat
