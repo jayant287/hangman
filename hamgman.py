@@ -1,3 +1,4 @@
+import time
 from random import choice
 def random_generate():
     with open("words.txt","r") as f:
@@ -6,8 +7,10 @@ def random_generate():
     lines=[i.strip("\n") for i in lines]
     return choice(lines)
 name = input("What is your name? \n")
-print("Hello, " + name, "Lets play hangman!")
+print("Hello, " + name+" Lets play hangman!")
+time.sleep(1)
 print("Start guessing...")
+time.sleep(1)
 word = random_generate()
 guesses = ""
 turns = len(word)+3
@@ -23,7 +26,7 @@ while turns > 0:
     if fail == 0:
         print("\n")        
         print ("Congratulations You  have won !!!!!")
-        print("The word is:",word)
+        print("The word is:",word.capitalize())
         break              
     guess = input("guess a character:") 
     guesses += guess                    
@@ -33,6 +36,6 @@ while turns > 0:
         print("You have more "+str(turns)+" turns remaining" ) 
         if turns == 0:           
             print("You have lost")
-            print("The word was: ",word)
+            print("The word was: ",word.capitalize())
             print("Better luck next time")
  
